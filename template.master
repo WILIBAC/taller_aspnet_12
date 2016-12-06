@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="template.master.cs" Inherits="template" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Trabajando con Master Page #manosenelcódigo</title>
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="header" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+   <h1>Título fuera del contenido del web form, es decir contenido genérico</h1>
+    <ul class="nav nav-tabs">
+          <li role="presentation" runat="server" id="link1"><asp:HyperLink runat="server" NavigateUrl="~/Default.aspx">Default</asp:HyperLink></li>
+          <li role="presentation" runat="server" id="link2"><asp:HyperLink runat="server" NavigateUrl="~/Default2.aspx">Default2</asp:HyperLink></li>
+    </ul>
+    <!--contenido-->
+    <asp:ContentPlaceHolder ID="contenido" runat="server"></asp:ContentPlaceHolder>
+    <!--/contenido-->
+</body>
+</html>
